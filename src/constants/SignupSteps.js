@@ -24,7 +24,7 @@ const evaluation = {
 
 
 const description = {
-  registration: registration, screening: assessment, placement: placement, evaluation: evaluation
+  registration: registration, assessment: assessment, placement: placement, evaluation: evaluation
 };
 
 export default description;

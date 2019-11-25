@@ -16,7 +16,7 @@ const example = {
     {key: '2', text: '3 clients take classes worth 9,000 per month and 2 clients take classes' +
           ' worth 5,000 per month'},
     {key: '3', text: "You will get a subsidy of\n 3(9,0000 x" +
-          " 10%)  2(5,000 x 10%) = 3,700"},
+          " 10%) + 2(5,000 x 10%) = 3,700"},
     {key: '4', text: 'Thus part of our classes will be paid for by this.'}]
 };
 

@@ -22,7 +22,7 @@ const premium = {
 };
 
 const descriptions = {
-  premium: premium, plus: plus, choice: choice, basic: basic, taLine: tagLine
+  premium: premium, plus: plus, choice: choice, basic: basic, tagLine: tagLine
 };
 
 export default descriptions;

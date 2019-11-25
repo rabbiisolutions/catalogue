@@ -9,16 +9,19 @@ const TeacherCategories = () => {
       <section>
         <title>{description.tagLine}</title>
         <ol className="teachers">
-          <li>{description.basic.type}</li>
-          <div>{description.basic.description}</div>
-          <li>{description.choice.type}</li>
-          <div>{description.choice.description}</div>
-          <li>{description.plus.type}</li>
-          <div>{description.plus.description}</div>
-          <li>{description.premium.type}</li>
-          <div>{description.premium.description}</div>
+          <li className="title">{description.basic.type}</li>
+          <div className="desc">{description.basic.description}</div>
+          <hr/>
+          <li className="title">{description.choice.type}</li>
+          <div className="desc">{description.choice.description}</div>
+          <hr/>
+          <li className="title">{description.plus.type}</li>
+          <div className="desc">{description.plus.description}</div>
+          <hr/>
+          <li className="title">{description.premium.type}</li>
+          <div className="desc">{description.premium.description}</div>
         </ol>
-        <div className="pricing">
+        <div id="pricing">
           <div id="table">
             <div id="titles">
               <span>{texts.tuitionAreas}</span>

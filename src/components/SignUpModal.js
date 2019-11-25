@@ -8,7 +8,6 @@ const SignUpModal = (props) => {
       <div className={props.className}>
         <div className={"close-icon " + props.status} onClick={e => signUpHandler(e)}>&#10006;</div>
         <div className="sign-up-text">{props.signUpText}</div>
-        <div className="user-title">Clients/Parents</div>
         <div id="client-btns">
           <ButtonLink link="https://forms.gle/y7KTkMDtYCtAywDu6" className="clients-btn" value="Get a Tutor"/>
         </div>

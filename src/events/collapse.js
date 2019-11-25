@@ -52,10 +52,15 @@ const sectionCollapseHandler = evt => {
     lastSection = current; // lastNode equal to current element
   }
   toggle(current);
-  try {
+  try { // scrolls in to the view of clicked collapse section
+    // try and catch, dependent on clicked element nested level
     element.parentNode.previousElementSibling.previousElementSibling.scrollIntoView();
   } catch (e) {
-    element.parentNode.parentNode.previousElementSibling.scrollIntoView();
+    try {
+      element.parentNode.parentNode.previousElementSibling.scrollIntoView();
+    } catch (e) {
+      element.parentNode.parentNode.parentNode.previousElementSibling.scrollIntoView();
+    }
   }
 };
 

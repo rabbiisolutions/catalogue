@@ -5,8 +5,9 @@ import TextWidget from "../widgets/mobile/TextWidget";
 
 const TuitionTypes = () => {
   return (
-      <section>
+      <section id="tuition-types">
         <TextWidget title={description.personal.title} description={description.personal.description}/>
+        <hr/>
         <TextWidget title={description.group.title} description={description.group.description}/>
       </section>
   );

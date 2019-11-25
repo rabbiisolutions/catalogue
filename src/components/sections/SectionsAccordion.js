@@ -20,14 +20,14 @@ const SectionsAccordion = () => {
         </div>
         ,
         <div className={name} key={12}>
-          {mobileAccordion.toggle(texts.academicTuition)}
+          {mobileAccordion.toggle(texts.tuitionAreas)}
           {
             <TuitionAreas/>
           }
         </div>
         ,
         <div className={name} key={13}>
-          {mobileAccordion.toggle(texts.skillTuition)}
+          {mobileAccordion.toggle(texts.teacherCategories)}
           {
             <TeacherCategories/>
           }

@@ -1,10 +1,11 @@
 import React from "react";
 import texts from "../../constants/texts";
 import mobileAccordion from "../accordion";
-import AcademicTutors from "./sub/AcademicTutors";
-import SkillTutors from "./sub/SkillTutors";
-import PaymentOptions from "./sub/PaymentOptions";
-import SignUpToday from "./sub/SignupToday";
+import TuitionTypes from "./sub/TuitionTypes";
+import TuitionAreas from "./sub/TuitionAreas";
+import TeacherCategories from "./sub/TeacherCategories";
+import Subsidy from "./sub/Subsidy";
+import SignUpToday from "./sub/SignUpToday";
 
 const name = 'sections-accordion';
 
@@ -12,24 +13,31 @@ const SectionsAccordion = () => {
     const collapses = [];
     collapses.push(
         <div className={name} key={11}>
-          {mobileAccordion.toggle(texts.academicTutors)}
+          {mobileAccordion.toggle(texts.typesOfTuition)}
           {
-            <AcademicTutors/>
+            <TuitionTypes/>
           }
         </div>
         ,
         <div className={name} key={12}>
-          {mobileAccordion.toggle(texts.skillTutors)}
+          {mobileAccordion.toggle(texts.academicTuition)}
           {
-            <SkillTutors/>
+            <TuitionAreas/>
           }
         </div>
         ,
         <div className={name} key={13}>
-          {mobileAccordion.toggle(texts.paymentOptions)}
+          {mobileAccordion.toggle(texts.skillTuition)}
           {
-            <PaymentOptions/>
+            <TeacherCategories/>
           }
+        </div>
+        ,
+        <div className={name} key={13}>
+        {mobileAccordion.toggle(texts.subsidy)}
+        {
+            <Subsidy/>
+        }
         </div>
         ,
         <div className={name} key={14}>

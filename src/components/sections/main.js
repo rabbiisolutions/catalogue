@@ -1,6 +1,8 @@
 import React from 'react';
-import SectionsAccordion from "./sectionsAccordion";
+import SectionsAccordion from "./SectionsAccordion";
 import BackGround from "../../helpers/backGround";
+import DesktopSections from "./DesktopSections";
+
 
 const Main = () => {
   return (
@@ -8,10 +10,15 @@ const Main = () => {
         <section className={"banner-" + BackGround()}>
           <div id="slogan">Welcome, Umoja ni Nguvu Yetu</div>
         </section>
-        <div id="tuition">Tuition Jobs</div>
+        <div id="tuition">Home Tuition Services</div>
         <div id="lead">Tap section to expand and view content</div>
         <section className="sections">
-          <SectionsAccordion/>
+          <div className="mobile">
+            <SectionsAccordion/>
+          </div>
+          <div>
+            <DesktopSections/>
+          </div>
         </section>
       </main>
   );

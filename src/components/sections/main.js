@@ -13,12 +13,10 @@ const Main = () => {
         <div id="tuition">Home Tuition Services</div>
         <div id="lead">Tap section to expand and view content</div>
         <section className="sections">
-          <div className="mobile">
+          <div id="mobile-view">
             <SectionsAccordion/>
           </div>
-          <div>
-            <DesktopSections/>
-          </div>
+          <DesktopSections/>
         </section>
       </main>
   );

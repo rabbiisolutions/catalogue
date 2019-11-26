@@ -209,6 +209,9 @@ body {
                     margin-left: 50px;
                 }
             }
+            .numbered-widget:last-child, .image-widget:last-child {
+                border-bottom: none;
+            }
 
             .image-widget:nth-child(even) {
                 @include desktop {
@@ -220,16 +223,19 @@ body {
                 }
             }
 
-            .numbered-widget:last-child, .image-widget:last-child {
-                border-bottom: none;
-            }
-
             .numbered-widget {
                 max-width: 700px;
                 min-width: 700px;
                 border-bottom: 2px solid color(white);
-
             }
+        }
+
+        .numbered-widget, .image-widget {
+            border-bottom: 2px solid color(white);
+        }
+
+        .numbered-widget:last-child, .image-widget:last-child {
+            border-bottom: none;
         }
 
         #tuition {
@@ -329,6 +335,7 @@ body {
 
                 .sub-title {
                     font-weight: bold;
+                    margin-top: 10px;
                     margin-bottom: 5px;
                 }
 
@@ -351,6 +358,13 @@ body {
                 #skill-tuition {
                     margin-top: 30px;
                 }
+
+                .numbered-widget {
+                    padding-left: 0;
+                    display: grid;
+                    border: none;
+                    font-size: 1em;
+                }
             }
         }
 
@@ -367,6 +381,12 @@ body {
 
             @include desktop {
                 display: block;
+            }
+            @include monitor {
+                width: 86%;
+                margin-left: 90px;
+                margin-right: 90px;
+                //text-align: center;
             }
 
             span {
@@ -445,8 +465,10 @@ body {
     }
 
     #teachers {
-        max-width: 700px;
-        min-width: 700px;
+        @include desktop {
+            max-width: 700px;
+            min-width: 700px;
+        }
 
         hr {
             margin-bottom: 25px;

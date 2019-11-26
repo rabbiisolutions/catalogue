@@ -1,5 +1,4 @@
 import React from "react";
-import TextWidget from "../widgets/mobile/TextWidget";
 import description from "../../../constants/Subsidy";
 import ImageWidget from "../widgets/ImageWidget";
 import texts from "../../../constants/texts";

@@ -38,7 +38,9 @@ const TeacherCategories = () => {
               </div>
               <hr/>
               <div id="body">
-                <SignUpModal className="sign-up div" signUpText={texts.signUpLong} status="hidden"/>
+                <SignUpModal
+                    className="sign-up div"  value={"Sign Up Here"}
+                    signUpText={texts.signUpLong} status="hidden"/>
               </div>
             </div>
             <span className="help">scroll to the right to view more <i className="arrow right"/></span>

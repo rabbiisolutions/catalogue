@@ -11,7 +11,7 @@ $webkitRadius : 10em;
 $borderRadius: 10em;
 $font24: 1em;
 $desktop: 800px;
-$monitor: 1000px;
+$monitor: 1240px;
 
 @function color($name) {
     @return map_get($colors, $name);
@@ -39,22 +39,6 @@ body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Nunito", sans-serif;
     width: 100%;
-
-    #mobile-view {
-        display: inherit;
-
-        @include desktop {
-            display: none;
-        }
-    }
-
-    #desktop-view {
-        display: none;
-
-        @include desktop {
-            display: inherit;
-        }
-    }
 
     .nav-bar {
         background-color: color(mirage);
@@ -162,6 +146,92 @@ body {
             background-image: url("../images/jpeg/welcome_trophy.jpg");
         }
 
+        #mobile-view {
+            display: inherit;
+
+            @include desktop {
+                display: none;
+            }
+        }
+
+        #desktop-view {
+            display: none;
+
+            @include desktop {
+                display: inherit;
+            }
+
+            section {
+                .title {
+                    color: color(deepSeaGreen);
+                    font-weight: bold;
+                    margin: 10px 0;
+                    font-size: 22px;
+                }
+
+                .sub-title {
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                }
+
+                .content {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                }
+            }
+
+            #signup-today {
+                .content {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            .image-widget {
+                display: flex;
+                align-items: center;
+                border-bottom: 2px solid color(white);
+                padding: 20px 0;
+                justify-content: center;
+                max-width: 700px;
+                min-width: 700px;
+
+                @include monitor {
+                    min-width: auto;
+                }
+
+                .image {
+                    display: inline-block;
+                }
+
+                .text {
+                    margin-left: 50px;
+                }
+            }
+
+            .image-widget:nth-child(even) {
+                @include desktop {
+                    flex-direction: row-reverse;
+                    .text {
+                        margin-right: 50px;
+                        margin-left: 0;
+                    }
+                }
+            }
+
+            .numbered-widget:last-child, .image-widget:last-child {
+                border-bottom: none;
+            }
+
+            .numbered-widget {
+                max-width: 700px;
+                min-width: 700px;
+                border-bottom: 2px solid color(white);
+
+            }
+        }
+
         #tuition {
             color: color(biscary);
             font-weight: bold;
@@ -195,6 +265,17 @@ body {
 
             @include desktop {
                 margin: 30px 7%;
+            }
+        }
+
+        .tag-line {
+            font-weight: 300;
+            font-size: .8em;
+            text-align: center;
+            margin-bottom: 10px;
+
+            @include desktop {
+                font-size: 1.125em;
             }
         }
 
@@ -256,16 +337,10 @@ body {
                     width: 95%;
                 }
 
-                .tag-line {
-                    font-weight: 300;
-                    font-size: .8em;
-                    text-align: center;
-                    margin-bottom: 10px;
-                }
-
                 .desc {
                     margin-bottom: 15px;
                 }
+
                 #skill-tuition, #academic-tuition {
                     .title {
                         text-align: center;
@@ -275,9 +350,37 @@ body {
 
                 #skill-tuition {
                     margin-top: 30px;
-                    border-top: 1px solid color(dullMirage);
                 }
             }
+        }
+
+        .xtion-title {
+            width: 100%;
+            text-align: center;
+            border-bottom: 2px solid color(mirage);
+            line-height: 0.1em;
+            margin: 90px 0 20px;
+            color: color(denim);
+            font-size: 28px;
+            font-weight: bold;
+            display: none;
+
+            @include desktop {
+                display: block;
+            }
+
+            span {
+                background-color: color(pampas);
+                padding:0 10px;
+            }
+        }
+
+    }
+
+    #tuition-areas {
+        #skill-tuition {
+            margin-top: 50px;
+            border-top: 1px solid color(dullMirage);
         }
     }
 
@@ -304,6 +407,7 @@ body {
 
         @include desktop {
             overflow-x: hidden;
+            margin-top: 30px;
         }
 
         hr {
@@ -337,6 +441,29 @@ body {
         .right {
             transform: rotate(-45deg);
             -webkit-transform: rotate(-45deg);
+        }
+    }
+
+    #teachers {
+        max-width: 700px;
+        min-width: 700px;
+
+        hr {
+            margin-bottom: 25px;
+            border-top: 2px solid color(white);
+            color: color(white);
+        }
+    }
+
+    #subsidy {
+        .image-widget:nth-child(odd) {
+            @include desktop {
+                flex-direction: row-reverse;
+                .text {
+                    margin-right: 50px;
+                    margin-left: 0;
+                }
+            }
         }
     }
 
@@ -394,14 +521,6 @@ body {
                     }
                 }
 
-            }
-        }
-
-        .content {
-            @include desktop {
-                display: grid;
-                justify-content: center;
-                align-items: center;
             }
         }
     }
@@ -550,10 +669,11 @@ body {
 
     .sign-up-text {
         text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-        color: color(darkGrey);
+        color: color(pampas);
         text-decoration: underline;
         font-size: 1.5em;
         text-align: center;
+        margin-bottom: 20px;
     }
 }
 
@@ -621,8 +741,8 @@ body {
 
     .clients-btn {
         background-color: color(mirage);
-        color: color(magenta);
-        border-color: color(magenta);
+        color: color(aqua);
+        border-color: color(aqua);
     }
 
     #client-btns {

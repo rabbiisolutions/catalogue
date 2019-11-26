@@ -1,17 +1,34 @@
 import React from "react";
 import TextWidget from "../widgets/mobile/TextWidget";
 import description from "../../../constants/Subsidy";
-import ListItem from "../../listItems";
+import ImageWidget from "../widgets/ImageWidget";
+import texts from "../../../constants/texts";
 
 
-const Subsidy = () => {
+const Subsidy = (props) => {
   return (
-      <section>
-        <TextWidget title={description.howItWorks.title} list={ListItem(description.howItWorks.list)}/>
-        <hr/>
-        <TextWidget title={description.example.title} list={ListItem(description.example.list)}/>
-        <hr/>
-        <TextWidget title={description.refers.title} list={ListItem(description.refers.list)}/>
+      <section id="subsidy">
+        <div className="xtion-title">
+          <span className="text">{texts.subsidy}</span>
+        </div>
+        <div className="tag-line">{description.tagLine}</div>
+        <div className="content">
+          <ImageWidget
+              title={description.howItWorks.title}
+              list={description.howItWorks.list}
+              src={
+                props.desktop ? description.howItWorks.image : null
+              }
+          />
+          <ImageWidget title={description.example.title} list={description.example.list}/>
+          <ImageWidget
+              title={description.refers.title}
+              list={description.refers.list}
+              src={
+                props.desktop ? description.refers.image : null
+              }
+          />
+        </div>
       </section>
   );
 };

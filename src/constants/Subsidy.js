@@ -4,6 +4,7 @@ import paidJpeg from "../images/jpeg/paid.jpg";
 import referWebp from "../images/webp/refer.webp";
 import referJpeg from "../images/jpeg/refer.jpg";
 
+const tagLine = 'Get your fee paid by simply refeering other clients';
 
 const howItWorks = {
   title: 'How it Works', image: webpIsSupported() ? paidWebp : paidJpeg,
@@ -33,7 +34,7 @@ const refers = {
 };
 
 const descriptions = {
-  howItWorks: howItWorks, example: example, refers: refers
+  howItWorks: howItWorks, example: example, refers: refers, tagLine: tagLine
 };
 
 export default descriptions;

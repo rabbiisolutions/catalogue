@@ -8,10 +8,10 @@ import SignUpToday from "./sub/SignUpToday";
 const DesktopSections = () => {
   return (
       <section id="desktop-view">
-        <TuitionTypes/>
-        <TuitionAreas/>
+        <TuitionTypes desktop={true}/>
+        <TuitionAreas desktop={true}/>
         <TeacherCategories/>
-        <Subsidy/>
+        <Subsidy desktop={true}/>
         <SignUpToday/>
       </section>
   );

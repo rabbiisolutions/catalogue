@@ -1,4 +1,5 @@
 import React from "react";
+import ListItem from "../../../listItems";
 
 const TextWidget = (props) => {
   return (
@@ -7,7 +8,7 @@ const TextWidget = (props) => {
         <div className="desc">{props.description}</div>
         {
           props.list ?
-            <div>{props.list}</div>
+            <div>{ListItem(props.list)}</div>
             : ''
         }
       </div>

@@ -12,10 +12,10 @@ const ImageWidget = (props) => {
             : ''
         }
         <div className="text">
-            <div className="title">
+            <div className="sub-title">
               {props.title}
             </div>
-            <div className="description">
+            <div className="desc">
               {props.description}
             </div>
             { props.list ? // append list if only list is passed
